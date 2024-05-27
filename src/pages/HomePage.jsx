@@ -17,7 +17,15 @@ const HomePage = () => {
         </HStack>
       </GridItem>
       <GridItem colSpan={3}>
-        <MainArea />
+        <HStack gap={0}>
+          <MainArea />
+          <Divider
+            orientation="vertical"
+            borderLeftWidth="2px"
+            borderColor="gray.600"
+            height="100vh"
+          />
+        </HStack>
       </GridItem>
       <GridItem colSpan={1}></GridItem>
     </Grid>

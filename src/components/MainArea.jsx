@@ -7,7 +7,7 @@ import PAGE_PROFILE_PICTURE from "../assets/React-profile-photo.png";
 
 const MainArea = () => {
   return (
-    <>
+    <div style={{ height: "100vh", width: "100%" }}>
       <HStack gap={5}>
         <Icon as={FaArrowLeftLong} cursor="pointer" m={5} fontSize={20} />
         <VStack gap={0}>
@@ -17,7 +17,7 @@ const MainArea = () => {
           </Heading>
         </VStack>
       </HStack>
-      <VStack gap={0} alignItems="start" mt={2}>
+      <VStack gap={0} alignItems="start" mt={2} height={320}>
         <Image
           src={PAGE_COVER_PICTURE}
           width="100%"
@@ -25,18 +25,22 @@ const MainArea = () => {
           objectFit="cover"
           alt="Cover Image"
         />
-        <HStack width="100%" justifyContent="space-between">
+        <HStack
+          width="100%"
+          justifyContent="space-between"
+          position="relative"
+          bottom="80px"
+        >
           <Image
             src={PAGE_PROFILE_PICTURE}
             width={150}
             borderRadius={100}
             border="3px solid black"
             position="relative"
-            bottom="80px"
             left="30px"
             alt="Profile Image"
           />
-          <HStack alignSelf="start" m={3}>
+          <HStack m={3} alignSelf="end">
             <Button
               fontSize={28}
               background="none"
@@ -66,7 +70,7 @@ const MainArea = () => {
           </HStack>
         </HStack>
       </VStack>
-    </>
+    </div>
   );
 };
 
