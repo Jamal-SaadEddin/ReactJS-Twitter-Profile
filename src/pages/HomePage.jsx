@@ -12,7 +12,6 @@ const HomePage = () => {
             orientation="vertical"
             borderLeftWidth="2px"
             borderColor="gray.600"
-            width="1%"
             height="100vh"
           />
         </HStack>

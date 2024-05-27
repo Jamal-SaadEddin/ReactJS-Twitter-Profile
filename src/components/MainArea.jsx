@@ -1,5 +1,9 @@
-import { HStack, Heading, Icon, VStack } from "@chakra-ui/react";
+import { Button, HStack, Heading, Icon, Image, VStack } from "@chakra-ui/react";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { LuBellPlus } from "react-icons/lu";
+import { MdMoreHoriz } from "react-icons/md";
+import PAGE_COVER_PICTURE from "../assets/React-cover-photo.png";
+import PAGE_PROFILE_PICTURE from "../assets/React-profile-photo.png";
 
 const MainArea = () => {
   return (
@@ -13,6 +17,55 @@ const MainArea = () => {
           </Heading>
         </VStack>
       </HStack>
+      <VStack gap={0} alignItems="start" mt={2}>
+        <Image
+          src={PAGE_COVER_PICTURE}
+          width="100%"
+          height={250}
+          objectFit="cover"
+          alt="Cover Image"
+        />
+        <HStack width="100%" justifyContent="space-between">
+          <Image
+            src={PAGE_PROFILE_PICTURE}
+            width={150}
+            borderRadius={100}
+            border="3px solid black"
+            position="relative"
+            bottom="80px"
+            left="30px"
+            alt="Profile Image"
+          />
+          <HStack alignSelf="start" m={3}>
+            <Button
+              fontSize={28}
+              background="none"
+              border="1px solid white"
+              borderRadius={100}
+              padding={0}
+            >
+              <MdMoreHoriz />
+            </Button>
+            <Button
+              fontSize={24}
+              background="none"
+              border="1px solid white"
+              borderRadius={100}
+              padding={0}
+            >
+              <LuBellPlus />
+            </Button>
+            <Button
+              fontSize={20}
+              background="none"
+              border="1px solid white"
+              borderRadius={100}
+            >
+              Following
+            </Button>
+          </HStack>
+        </HStack>
+      </VStack>
     </>
   );
 };
