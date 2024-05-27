@@ -1,5 +1,6 @@
 import { Divider, Grid, GridItem, HStack } from "@chakra-ui/react";
 import SideBar from "../components/SideBar";
+import MainArea from "../components/MainArea";
 
 const HomePage = () => {
   return (
@@ -16,7 +17,9 @@ const HomePage = () => {
           />
         </HStack>
       </GridItem>
-      <GridItem colSpan={3}></GridItem>
+      <GridItem colSpan={3}>
+        <MainArea />
+      </GridItem>
       <GridItem colSpan={1}></GridItem>
     </Grid>
   );
