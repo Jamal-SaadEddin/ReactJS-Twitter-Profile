@@ -18,19 +18,29 @@ import VITE from "../assets/vite.jpg";
 
 const DiscoverArea = () => {
   return (
-    <VStack py={5} pr={5} gap={4}>
-      <InputGroup size="md">
-        <InputLeftElement pointerEvents="none">
-          <Icon as={CiSearch} color="gray.500" fontSize="20px" />
-        </InputLeftElement>
-        <Input
-          type="text"
-          placeholder="Search"
-          bg="#202327"
-          border="0"
-          borderRadius={100}
-        />
-      </InputGroup>
+    <VStack height="100%" pb={5} pr={5} gap={4}>
+      <VStack
+        w="100%"
+        position="sticky"
+        top={0}
+        zIndex={1000}
+        h="50px"
+        bg="black"
+        justifyContent="center"
+      >
+        <InputGroup size="md">
+          <InputLeftElement pointerEvents="none">
+            <Icon as={CiSearch} color="gray.500" fontSize="20px" />
+          </InputLeftElement>
+          <Input
+            type="text"
+            placeholder="Search"
+            bg="#202327"
+            border="0"
+            borderRadius={100}
+          />
+        </InputGroup>
+      </VStack>
       <VStack
         width="100%"
         alignItems="start"
@@ -151,6 +161,8 @@ const DiscoverArea = () => {
         borderColor="gray.600"
         borderRadius={20}
         gap={5}
+        position="sticky"
+        top="61px"
       >
         <Heading fontSize="xl">Trends for you</Heading>
         <VStack alignItems="start" gap={1}>
