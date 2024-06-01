@@ -8,6 +8,7 @@ import {
   InputGroup,
   InputLeftElement,
   Link,
+  Text,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
@@ -67,7 +68,7 @@ const DiscoverArea = () => {
               <Heading
                 fontSize="md"
                 fontWeight="500"
-                color="gray"
+                color="gray.600"
                 cursor="pointer"
               >
                 @sveltejs
@@ -94,7 +95,7 @@ const DiscoverArea = () => {
               <Heading
                 fontSize="md"
                 fontWeight="500"
-                color="gray"
+                color="gray.600"
                 cursor="pointer"
               >
                 @vite_js
@@ -126,7 +127,7 @@ const DiscoverArea = () => {
               <Heading
                 fontSize="md"
                 fontWeight="500"
-                color="gray"
+                color="gray.600"
                 cursor="pointer"
               >
                 @vercel
@@ -152,83 +153,134 @@ const DiscoverArea = () => {
           Show more
         </Link>
       </VStack>
-      <VStack
-        width="100%"
-        alignItems="start"
-        py={3}
-        px={4}
-        border="1px solid"
-        borderColor="gray.600"
-        borderRadius={20}
-        gap={5}
-        position="sticky"
-        top="61px"
-      >
-        <Heading fontSize="xl">Trends for you</Heading>
-        <VStack alignItems="start" gap={1}>
-          <Heading fontSize="md" cursor="pointer">
-            Vercel
-          </Heading>
-          <Heading fontSize="md" fontWeight="500" color="gray" cursor="pointer">
-            38K posts
-          </Heading>
-        </VStack>
-        <VStack alignItems="start" gap={1}>
-          <Heading fontSize="md" cursor="pointer">
-            Vercel
-          </Heading>
-          <Heading fontSize="md" fontWeight="500" color="gray" cursor="pointer">
-            38K posts
-          </Heading>
-        </VStack>
-        <VStack alignItems="start" gap={1}>
-          <Heading fontSize="md" cursor="pointer">
-            Vercel
-          </Heading>
-          <Heading fontSize="md" fontWeight="500" color="gray" cursor="pointer">
-            38K posts
-          </Heading>
-        </VStack>
-        <VStack alignItems="start" gap={1}>
-          <Heading fontSize="md" cursor="pointer">
-            Vercel
-          </Heading>
-          <Heading fontSize="md" fontWeight="500" color="gray" cursor="pointer">
-            38K posts
-          </Heading>
-        </VStack>
-        <VStack alignItems="start" gap={1}>
-          <Heading fontSize="md" cursor="pointer">
-            Vercel
-          </Heading>
-          <Heading fontSize="md" fontWeight="500" color="gray" cursor="pointer">
-            38K posts
-          </Heading>
-        </VStack>
-        <VStack alignItems="start" gap={1}>
-          <Heading fontSize="md" cursor="pointer">
-            Vercel
-          </Heading>
-          <Heading fontSize="md" fontWeight="500" color="gray" cursor="pointer">
-            38K posts
-          </Heading>
-        </VStack>
-        <VStack alignItems="start" gap={1}>
-          <Heading fontSize="md" cursor="pointer">
-            Vercel
-          </Heading>
-          <Heading fontSize="md" fontWeight="500" color="gray" cursor="pointer">
-            38K posts
-          </Heading>
-        </VStack>
-        <Link
-          href="/"
-          color="#1A8BD7"
+      <VStack position="sticky" top="61px" gap={4}>
+        <VStack
           width="100%"
-          _hover={{ textDecoration: "none" }}
+          alignItems="start"
+          py={3}
+          px={4}
+          border="1px solid"
+          borderColor="gray.600"
+          borderRadius={20}
+          gap={5}
         >
-          Show more
-        </Link>
+          <Heading fontSize="xl">Trends for you</Heading>
+          <VStack alignItems="start" gap={1}>
+            <Heading fontSize="md" cursor="pointer">
+              Vercel
+            </Heading>
+            <Heading
+              fontSize="md"
+              fontWeight="500"
+              color="gray.600"
+              cursor="pointer"
+            >
+              38K posts
+            </Heading>
+          </VStack>
+          <VStack alignItems="start" gap={1}>
+            <Heading fontSize="md" cursor="pointer">
+              Vercel
+            </Heading>
+            <Heading
+              fontSize="md"
+              fontWeight="500"
+              color="gray.600"
+              cursor="pointer"
+            >
+              38K posts
+            </Heading>
+          </VStack>
+          <VStack alignItems="start" gap={1}>
+            <Heading fontSize="md" cursor="pointer">
+              Vercel
+            </Heading>
+            <Heading
+              fontSize="md"
+              fontWeight="500"
+              color="gray.600"
+              cursor="pointer"
+            >
+              38K posts
+            </Heading>
+          </VStack>
+          <VStack alignItems="start" gap={1}>
+            <Heading fontSize="md" cursor="pointer">
+              Vercel
+            </Heading>
+            <Heading
+              fontSize="md"
+              fontWeight="500"
+              color="gray.600"
+              cursor="pointer"
+            >
+              38K posts
+            </Heading>
+          </VStack>
+          <VStack alignItems="start" gap={1}>
+            <Heading fontSize="md" cursor="pointer">
+              Vercel
+            </Heading>
+            <Heading
+              fontSize="md"
+              fontWeight="500"
+              color="gray.600"
+              cursor="pointer"
+            >
+              38K posts
+            </Heading>
+          </VStack>
+          <VStack alignItems="start" gap={1}>
+            <Heading fontSize="md" cursor="pointer">
+              Vercel
+            </Heading>
+            <Heading
+              fontSize="md"
+              fontWeight="500"
+              color="gray.600"
+              cursor="pointer"
+            >
+              38K posts
+            </Heading>
+          </VStack>
+          <VStack alignItems="start" gap={1}>
+            <Heading fontSize="md" cursor="pointer">
+              Vercel
+            </Heading>
+            <Heading
+              fontSize="md"
+              fontWeight="500"
+              color="gray.600"
+              cursor="pointer"
+            >
+              38K posts
+            </Heading>
+          </VStack>
+          <Link
+            href="/"
+            color="#1A8BD7"
+            width="100%"
+            _hover={{ textDecoration: "none" }}
+          >
+            Show more
+          </Link>
+        </VStack>
+        <HStack
+          width="100%"
+          flexWrap="wrap"
+          rowGap={0}
+          fontSize="sm"
+          color="gray.600"
+          px={4}
+        >
+          <Link href="/">Terms of Service</Link>
+          <Link href="/">Privacy Policy</Link>
+          <Link href="/">Cookie Policy</Link>
+          <Link href="/">Accessibility</Link>
+          <Link href="/">Ads info</Link>
+          <Link href="/">More ···</Link>
+          <Text>© 2024 X Corp.</Text>
+        </HStack>
       </VStack>
     </VStack>
   );

@@ -78,7 +78,7 @@ const SideBar = () => {
               <Heading
                 fontSize="large"
                 fontWeight="500"
-                color="gray"
+                color="gray.600"
                 cursor="pointer"
               >
                 @JamalSaadEddin
