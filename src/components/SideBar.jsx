@@ -11,10 +11,10 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
+import { IoIosMore } from "react-icons/io";
 import X_LOGO from "../assets/XLogo.png";
 import ProfilePicture from "../assets/jamal_pp.jpg";
 import sideBarButtons from "../constants/SideBarButtons";
-import { IoIosMore } from "react-icons/io";
 
 const SideBar = () => {
   return (
@@ -25,7 +25,8 @@ const SideBar = () => {
           {sideBarButtons.map((btn) => (
             <ListItem mb={1}>
               <Button
-                width="100%"
+                borderRadius={100}
+                padding={5}
                 justifyContent="left"
                 size="lg"
                 leftIcon={btn.logo}
@@ -49,26 +50,28 @@ const SideBar = () => {
         </Button>
       </GridItem>
       <GridItem alignSelf="end" m={5}>
-        <HStack>
-          <Image
-            src={ProfilePicture}
-            width="47px"
-            borderRadius={50}
-            cursor="pointer"
-          />
-          <VStack>
-            <Heading fontSize="large" cursor="pointer">
-              Jamal SaadEddin
-            </Heading>
-            <Heading
-              fontSize="large"
-              fontWeight="500"
-              color="gray"
+        <HStack width="100%" justifyContent="space-between">
+          <HStack>
+            <Image
+              src={ProfilePicture}
+              width="47px"
+              borderRadius={50}
               cursor="pointer"
-            >
-              @JamalSaadEddin
-            </Heading>
-          </VStack>
+            />
+            <VStack>
+              <Heading fontSize="large" cursor="pointer">
+                Jamal SaadEddin
+              </Heading>
+              <Heading
+                fontSize="large"
+                fontWeight="500"
+                color="gray"
+                cursor="pointer"
+              >
+                @JamalSaadEddin
+              </Heading>
+            </VStack>
+          </HStack>
 
           <Icon
             as={IoIosMore}
