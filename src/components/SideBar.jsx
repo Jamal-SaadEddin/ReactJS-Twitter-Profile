@@ -18,7 +18,7 @@ import sideBarButtons from "../constants/SideBarButtons";
 
 const SideBar = () => {
   return (
-    <Grid templateRows="1fr 1fr" height="100vh" width="99%">
+    <Grid templateRows="1fr 1fr" height="100vh" width="100%">
       <GridItem>
         <Image w={7} src={X_LOGO} alt="X Logo" ml={5} my={5} cursor="pointer" />
         <List mb={5}>
