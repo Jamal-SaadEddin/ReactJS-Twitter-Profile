@@ -1,31 +1,15 @@
-import { Divider, Grid, GridItem, HStack } from "@chakra-ui/react";
-import SideBar from "../components/SideBar";
+import { Grid, GridItem } from "@chakra-ui/react";
 import MainArea from "../components/MainArea";
+import SideBar from "../components/SideBar";
 
 const HomePage = () => {
   return (
-    <Grid h="100vh" templateColumns="repeat(5, 1fr)">
+    <Grid templateColumns="repeat(5, 1fr)" columnGap={10}>
       <GridItem colSpan={1}>
-        <HStack>
-          <SideBar />
-          <Divider
-            orientation="vertical"
-            borderLeftWidth="2px"
-            borderColor="gray.600"
-            height="100vh"
-          />
-        </HStack>
+        <SideBar />
       </GridItem>
       <GridItem colSpan={3}>
-        <HStack gap={0}>
-          <MainArea />
-          <Divider
-            orientation="vertical"
-            borderLeftWidth="2px"
-            borderColor="gray.600"
-            height="100vh"
-          />
-        </HStack>
+        <MainArea />
       </GridItem>
       <GridItem colSpan={1}></GridItem>
     </Grid>

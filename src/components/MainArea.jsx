@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   HStack,
   Heading,
@@ -26,7 +27,14 @@ import PAGE_PROFILE_PICTURE from "../assets/React-profile-photo.png";
 
 const MainArea = () => {
   return (
-    <div style={{ height: "100vh", width: "100%" }}>
+    <Box
+      width="100%"
+      minHeight="100vh"
+      borderRight="1px solid"
+      borderRightColor="gray.600"
+      borderLeft="1px solid"
+      borderLeftColor="gray.600"
+    >
       <HStack gap={5}>
         <Icon as={FaArrowLeftLong} cursor="pointer" m={5} fontSize={20} />
         <VStack gap={0}>
@@ -147,7 +155,7 @@ const MainArea = () => {
             <HStack
               width="100%"
               alignItems="start"
-              borderTop="2px solid"
+              borderTop="1px solid"
               borderTopColor="gray.600"
               p={5}
             >
@@ -238,7 +246,7 @@ const MainArea = () => {
             <HStack
               width="100%"
               alignItems="start"
-              borderTop="2px solid"
+              borderTop="1px solid"
               borderTopColor="gray.600"
               p={5}
             >
@@ -338,7 +346,7 @@ const MainArea = () => {
           </TabPanel>
         </TabPanels>
       </Tabs>
-    </div>
+    </Box>
   );
 };
 
