@@ -1,7 +1,14 @@
-import { HStack, Heading, Image, VStack } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import React from "react";
+import SummaryWidget from "./SummaryWidget";
 
-const ProfileSummaryCard = ({ profilePicture, size, action = null }) => {
+const ProfileSummaryCard = ({
+  profilePicture,
+  size,
+  userName,
+  userId,
+  action = null,
+}) => {
   const profilePictureSize =
     size === "large" ? "47px" : size === "md" ? "40px" : "35px";
   const fontSize = size === "large" ? "large" : size === "md" ? "md" : "sm";
@@ -15,19 +22,7 @@ const ProfileSummaryCard = ({ profilePicture, size, action = null }) => {
           borderRadius={50}
           cursor="pointer"
         />
-        <VStack>
-          <Heading fontSize={fontSize} cursor="pointer">
-            Jamal SaadEddin
-          </Heading>
-          <Heading
-            fontSize={fontSize}
-            fontWeight="500"
-            color="gray.600"
-            cursor="pointer"
-          >
-            @JamalSaadEddin
-          </Heading>
-        </VStack>
+        <SummaryWidget fontSize={fontSize} title={userName} content={userId} />
       </HStack>
 
       {action}

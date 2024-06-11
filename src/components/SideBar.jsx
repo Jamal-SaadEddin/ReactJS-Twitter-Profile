@@ -66,6 +66,8 @@ const SideBar = () => {
           <ProfileSummaryCard
             profilePicture={ProfilePicture}
             size="large"
+            userName="Jamal SaadEddin"
+            userId="@JamalSaadEddin"
             action={
               <Button bg="none" borderRadius={100} p={0} fontSize={32}>
                 <Icon as={IoIosMore} />
