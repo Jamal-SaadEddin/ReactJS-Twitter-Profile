@@ -12,9 +12,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { CiSearch } from "react-icons/ci";
-import SVELTE from "../assets/svelte.png";
-import VERCEL from "../assets/vercel.png";
-import VITE from "../assets/vite.jpg";
+
+import { suggestedTrends, suggestedUsers } from "../constants/suggestedContent";
 import ProfileSummaryCard from "./ProfileSummaryCard";
 import SummaryWidget from "./SummaryWidget";
 
@@ -54,27 +53,15 @@ const DiscoverArea = () => {
         gap={5}
       >
         <Heading fontSize="xl">You might like</Heading>
-        <ProfileSummaryCard
-          profilePicture={SVELTE}
-          size="md"
-          userName="Svelte"
-          userId="@sveltejs"
-          action={<FollowButton />}
-        />
-        <ProfileSummaryCard
-          profilePicture={VITE}
-          size="md"
-          userName="Vite"
-          userId="@vite_js"
-          action={<FollowButton />}
-        />
-        <ProfileSummaryCard
-          profilePicture={VERCEL}
-          size="md"
-          userName="Vercel"
-          userId="@vercel"
-          action={<FollowButton />}
-        />
+        {suggestedUsers.map((user) => (
+          <ProfileSummaryCard
+            profilePicture={user.image}
+            size="md"
+            userName={user.name}
+            userId={user._id}
+            action={<FollowButton />}
+          />
+        ))}
 
         <ShowMoreLink />
       </VStack>
@@ -90,13 +77,13 @@ const DiscoverArea = () => {
           gap={5}
         >
           <Heading fontSize="xl">Trends for you</Heading>
-          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
-          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
-          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
-          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
-          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
-          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
-          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
+          {suggestedTrends.map((trend) => (
+            <SummaryWidget
+              fontSize="md"
+              title={trend.title}
+              content={trend.postsCount}
+            />
+          ))}
 
           <ShowMoreLink />
         </VStack>
