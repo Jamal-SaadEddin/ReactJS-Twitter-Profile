@@ -3,19 +3,17 @@ import {
   Button,
   Grid,
   GridItem,
-  HStack,
-  Heading,
   Icon,
   Image,
   List,
   ListItem,
-  VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { IoIosMore } from "react-icons/io";
 import X_LOGO from "../assets/XLogo.png";
 import ProfilePicture from "../assets/jamal_pp.jpg";
 import sideBarButtons from "../constants/SideBarButtons";
+import ProfileSummaryCard from "./ProfileSummaryCard";
 
 const SideBar = () => {
   return (
@@ -65,39 +63,15 @@ const SideBar = () => {
           </Button>
         </GridItem>
         <GridItem alignSelf="end" m={5}>
-          <HStack width="100%" justifyContent="space-between">
-            <HStack>
-              <Image
-                src={ProfilePicture}
-                width="47px"
-                borderRadius={50}
-                cursor="pointer"
-              />
-              <VStack>
-                <Heading fontSize="large" cursor="pointer">
-                  Jamal SaadEddin
-                </Heading>
-                <Heading
-                  fontSize="large"
-                  fontWeight="500"
-                  color="gray.600"
-                  cursor="pointer"
-                >
-                  @JamalSaadEddin
-                </Heading>
-              </VStack>
-            </HStack>
-
-            <Icon
-              as={IoIosMore}
-              fontSize={36}
-              ml={3}
-              padding={1}
-              borderRadius="15px"
-              cursor="pointer"
-              _hover={{ background: "#292929" }}
-            />
-          </HStack>
+          <ProfileSummaryCard
+            profilePicture={ProfilePicture}
+            size="large"
+            action={
+              <Button bg="none" borderRadius={100} p={0} fontSize={32}>
+                <Icon as={IoIosMore} />
+              </Button>
+            }
+          />
         </GridItem>
       </Grid>
     </Box>
