@@ -2,8 +2,10 @@ import { Heading, VStack } from "@chakra-ui/react";
 import React from "react";
 
 const SummaryWidget = ({ fontSize, title, content }) => {
+  const gap = fontSize === "large" ? 2 : 1;
+
   return (
-    <VStack>
+    <VStack alignItems="start" gap={gap}>
       <Heading fontSize={fontSize} cursor="pointer">
         {title}
       </Heading>

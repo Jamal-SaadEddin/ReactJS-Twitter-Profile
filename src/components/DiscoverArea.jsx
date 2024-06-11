@@ -3,7 +3,6 @@ import {
   HStack,
   Heading,
   Icon,
-  Image,
   Input,
   InputGroup,
   InputLeftElement,
@@ -16,6 +15,8 @@ import { CiSearch } from "react-icons/ci";
 import SVELTE from "../assets/svelte.png";
 import VERCEL from "../assets/vercel.png";
 import VITE from "../assets/vite.jpg";
+import ProfileSummaryCard from "./ProfileSummaryCard";
+import SummaryWidget from "./SummaryWidget";
 
 const DiscoverArea = () => {
   return (
@@ -53,105 +54,29 @@ const DiscoverArea = () => {
         gap={5}
       >
         <Heading fontSize="xl">You might like</Heading>
-        <HStack width="100%" justifyContent="space-between">
-          <HStack>
-            <Image
-              src={SVELTE}
-              width="40px"
-              borderRadius={50}
-              cursor="pointer"
-            />
-            <VStack alignItems="start" gap={1}>
-              <Heading fontSize="md" cursor="pointer">
-                Svelte
-              </Heading>
-              <Heading
-                fontSize="md"
-                fontWeight="500"
-                color="gray.600"
-                cursor="pointer"
-              >
-                @sveltejs
-              </Heading>
-            </VStack>
-          </HStack>
+        <ProfileSummaryCard
+          profilePicture={SVELTE}
+          size="md"
+          userName="Svelte"
+          userId="@sveltejs"
+          action={<FollowButton />}
+        />
+        <ProfileSummaryCard
+          profilePicture={VITE}
+          size="md"
+          userName="Vite"
+          userId="@vite_js"
+          action={<FollowButton />}
+        />
+        <ProfileSummaryCard
+          profilePicture={VERCEL}
+          size="md"
+          userName="Vercel"
+          userId="@vercel"
+          action={<FollowButton />}
+        />
 
-          <Button
-            color="black"
-            bg="white"
-            borderRadius={100}
-            _hover={{ bg: "gray.100" }}
-          >
-            Follow
-          </Button>
-        </HStack>
-        <HStack width="100%" justifyContent="space-between">
-          <HStack>
-            <Image src={VITE} width="40px" borderRadius={50} cursor="pointer" />
-            <VStack alignItems="start" gap={1}>
-              <Heading fontSize="md" cursor="pointer">
-                Vite
-              </Heading>
-              <Heading
-                fontSize="md"
-                fontWeight="500"
-                color="gray.600"
-                cursor="pointer"
-              >
-                @vite_js
-              </Heading>
-            </VStack>
-          </HStack>
-
-          <Button
-            color="black"
-            bg="white"
-            borderRadius={100}
-            _hover={{ bg: "gray.100" }}
-          >
-            Follow
-          </Button>
-        </HStack>
-        <HStack width="100%" justifyContent="space-between">
-          <HStack>
-            <Image
-              src={VERCEL}
-              width="40px"
-              borderRadius={50}
-              cursor="pointer"
-            />
-            <VStack alignItems="start" gap={1}>
-              <Heading fontSize="md" cursor="pointer">
-                Vercel
-              </Heading>
-              <Heading
-                fontSize="md"
-                fontWeight="500"
-                color="gray.600"
-                cursor="pointer"
-              >
-                @vercel
-              </Heading>
-            </VStack>
-          </HStack>
-
-          <Button
-            color="black"
-            bg="white"
-            borderRadius={100}
-            _hover={{ bg: "gray.100" }}
-          >
-            Follow
-          </Button>
-        </HStack>
-        <Link
-          href="/"
-          color="#1A8BD7"
-          width="100%"
-          _hover={{ textDecoration: "none" }}
-        >
-          Show more
-        </Link>
+        <ShowMoreLink />
       </VStack>
       <VStack position="sticky" top="61px" gap={4}>
         <VStack
@@ -165,105 +90,15 @@ const DiscoverArea = () => {
           gap={5}
         >
           <Heading fontSize="xl">Trends for you</Heading>
-          <VStack alignItems="start" gap={1}>
-            <Heading fontSize="md" cursor="pointer">
-              Vercel
-            </Heading>
-            <Heading
-              fontSize="md"
-              fontWeight="500"
-              color="gray.600"
-              cursor="pointer"
-            >
-              38K posts
-            </Heading>
-          </VStack>
-          <VStack alignItems="start" gap={1}>
-            <Heading fontSize="md" cursor="pointer">
-              Vercel
-            </Heading>
-            <Heading
-              fontSize="md"
-              fontWeight="500"
-              color="gray.600"
-              cursor="pointer"
-            >
-              38K posts
-            </Heading>
-          </VStack>
-          <VStack alignItems="start" gap={1}>
-            <Heading fontSize="md" cursor="pointer">
-              Vercel
-            </Heading>
-            <Heading
-              fontSize="md"
-              fontWeight="500"
-              color="gray.600"
-              cursor="pointer"
-            >
-              38K posts
-            </Heading>
-          </VStack>
-          <VStack alignItems="start" gap={1}>
-            <Heading fontSize="md" cursor="pointer">
-              Vercel
-            </Heading>
-            <Heading
-              fontSize="md"
-              fontWeight="500"
-              color="gray.600"
-              cursor="pointer"
-            >
-              38K posts
-            </Heading>
-          </VStack>
-          <VStack alignItems="start" gap={1}>
-            <Heading fontSize="md" cursor="pointer">
-              Vercel
-            </Heading>
-            <Heading
-              fontSize="md"
-              fontWeight="500"
-              color="gray.600"
-              cursor="pointer"
-            >
-              38K posts
-            </Heading>
-          </VStack>
-          <VStack alignItems="start" gap={1}>
-            <Heading fontSize="md" cursor="pointer">
-              Vercel
-            </Heading>
-            <Heading
-              fontSize="md"
-              fontWeight="500"
-              color="gray.600"
-              cursor="pointer"
-            >
-              38K posts
-            </Heading>
-          </VStack>
-          <VStack alignItems="start" gap={1}>
-            <Heading fontSize="md" cursor="pointer">
-              Vercel
-            </Heading>
-            <Heading
-              fontSize="md"
-              fontWeight="500"
-              color="gray.600"
-              cursor="pointer"
-            >
-              38K posts
-            </Heading>
-          </VStack>
-          <Link
-            href="/"
-            color="#1A8BD7"
-            width="100%"
-            _hover={{ textDecoration: "none" }}
-          >
-            Show more
-          </Link>
+          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
+          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
+          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
+          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
+          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
+          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
+          <SummaryWidget fontSize="md" title="Vercel" content="38K posts" />
+
+          <ShowMoreLink />
         </VStack>
         <HStack
           width="100%"
@@ -287,3 +122,25 @@ const DiscoverArea = () => {
 };
 
 export default DiscoverArea;
+
+const FollowButton = () => (
+  <Button
+    color="black"
+    bg="white"
+    borderRadius={100}
+    _hover={{ bg: "gray.100" }}
+  >
+    Follow
+  </Button>
+);
+
+const ShowMoreLink = () => (
+  <Link
+    href="/"
+    color="#1A8BD7"
+    width="100%"
+    _hover={{ textDecoration: "none" }}
+  >
+    Show more
+  </Link>
+);
