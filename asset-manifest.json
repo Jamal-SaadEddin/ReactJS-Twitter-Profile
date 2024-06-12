@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/ReactJS-Twitter-Profile/static/js/main.6bf37e26.js",
+    "static/media/XLogo.png": "/ReactJS-Twitter-Profile/static/media/XLogo.d3ba47f085be8e460cd8.png",
+    "static/media/jamal_pp.jpg": "/ReactJS-Twitter-Profile/static/media/jamal_pp.4551c8ed7ecbab7b07b5.jpg",
+    "static/media/svelte.png": "/ReactJS-Twitter-Profile/static/media/svelte.de72e0811b907cc7686e.png",
+    "static/media/React-profile-photo.png": "/ReactJS-Twitter-Profile/static/media/React-profile-photo.0cfff5c673420f207e4d.png",
+    "static/media/React-cover-photo.png": "/ReactJS-Twitter-Profile/static/media/React-cover-photo.f867396772a3306b0be0.png",
+    "index.html": "/ReactJS-Twitter-Profile/index.html",
+    "main.6bf37e26.js.map": "/ReactJS-Twitter-Profile/static/js/main.6bf37e26.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.6bf37e26.js"
+  ]
+}
