@@ -74,7 +74,7 @@ const DiscoverArea = () => {
           border="1px solid"
           borderColor="gray.600"
           borderRadius={20}
-          gap={5}
+          rowGap={5}
         >
           <Heading fontSize="xl">Trends for you</Heading>
           {suggestedTrends.map((trend) => (

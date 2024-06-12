@@ -29,7 +29,7 @@ const MainArea = () => {
   return (
     <Box
       width="100%"
-      minHeight="100vh"
+      minHeight="100%"
       borderRight="1px solid"
       borderRightColor="gray.600"
       borderLeft="1px solid"

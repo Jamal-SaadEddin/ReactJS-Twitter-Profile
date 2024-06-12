@@ -1,19 +1,11 @@
-import {
-  Box,
-  Button,
-  Grid,
-  GridItem,
-  Icon,
-  Image,
-  List,
-  ListItem,
-} from "@chakra-ui/react";
+import { Box, Button, Grid, GridItem, Icon, Image } from "@chakra-ui/react";
 import React from "react";
 import { IoIosMore } from "react-icons/io";
 import X_LOGO from "../assets/XLogo.png";
 import ProfilePicture from "../assets/jamal_pp.jpg";
 import sideBarButtons from "../constants/SideBarButtons";
 import ProfileSummaryCard from "./ProfileSummaryCard";
+import SideBarList from "./SideBarList";
 
 const SideBar = () => {
   return (
@@ -34,23 +26,7 @@ const SideBar = () => {
             my={5}
             cursor="pointer"
           />
-          <List mb={5}>
-            {sideBarButtons.map((btn) => (
-              <ListItem mb={1}>
-                <Button
-                  borderRadius={100}
-                  padding={5}
-                  justifyContent="left"
-                  size="lg"
-                  leftIcon={btn.logo}
-                  gap={2}
-                  bg="transparent"
-                >
-                  {btn.title}
-                </Button>
-              </ListItem>
-            ))}
-          </List>
+          <SideBarList sideBarButtons={sideBarButtons} />
           <Button
             size="lg"
             width="100%"
