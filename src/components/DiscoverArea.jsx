@@ -5,10 +5,10 @@ import {
   InputGroup,
   InputLeftElement,
   VStack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { CiSearch } from "react-icons/ci";
-
 import { suggestedTrends, suggestedUsers } from "../constants/suggestedContent";
 import DiscoverBox from "./DiscoverBox";
 import Footer from "./Footer";
@@ -16,6 +16,9 @@ import ProfileSummaryCard from "./ProfileSummaryCard";
 import SummaryWidget from "./SummaryWidget";
 
 const DiscoverArea = () => {
+  const SearchDivBgColor = useColorModeValue("white", "black");
+  const SearchInputBgColor = useColorModeValue("gray.100", "gray.700");
+
   const SuggestedUsersWidgets = suggestedUsers.map((user) => (
     <ProfileSummaryCard
       profilePicture={user.image}
@@ -42,7 +45,7 @@ const DiscoverArea = () => {
         top={0}
         zIndex={1000}
         h="50px"
-        bg="black"
+        bg={SearchDivBgColor}
         justifyContent="center"
       >
         <InputGroup size="md">
@@ -52,7 +55,7 @@ const DiscoverArea = () => {
           <Input
             type="text"
             placeholder="Search"
-            bg="#202327"
+            bg={SearchInputBgColor}
             border="0"
             borderRadius={100}
           />
