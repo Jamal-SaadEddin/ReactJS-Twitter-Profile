@@ -13,7 +13,9 @@ const Footer = () => {
       px={4}
     >
       {footerLinks.map((link) => (
-        <Link href={link.to}>{link.title}</Link>
+        <Link key={link.title} href={link.to}>
+          {link.title}
+        </Link>
       ))}
       <Text>© 2024 X Corp.</Text>
     </HStack>

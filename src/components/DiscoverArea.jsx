@@ -1,32 +1,15 @@
-import { Button, VStack, useColorModeValue } from "@chakra-ui/react";
+import { VStack, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
-import { suggestedTrends, suggestedUsers } from "../constants/suggestedContent";
 import DiscoverBox from "./DiscoverBox";
 import Footer from "./Footer";
-import ProfileSummaryCard from "./ProfileSummaryCard";
 import SearchInput from "./SearchInput";
-import SummaryWidget from "./SummaryWidget";
+import {
+  SuggestedTrendsWidgets,
+  SuggestedUsersWidgets,
+} from "./SuggestedContent";
 
 const DiscoverArea = () => {
   const SearchDivBgColor = useColorModeValue("white", "black");
-
-  const SuggestedUsersWidgets = suggestedUsers.map((user) => (
-    <ProfileSummaryCard
-      profilePicture={user.image}
-      size="md"
-      userName={user.name}
-      userId={user._id}
-      action={<FollowButton />}
-    />
-  ));
-
-  const SuggestedTrendsWidgets = suggestedTrends.map((trend) => (
-    <SummaryWidget
-      fontSize="md"
-      title={trend.title}
-      content={trend.postsCount}
-    />
-  ));
 
   return (
     <VStack height="100%" pb={5} pr={5} gap={4}>
@@ -51,14 +34,3 @@ const DiscoverArea = () => {
 };
 
 export default DiscoverArea;
-
-const FollowButton = () => (
-  <Button
-    color="black"
-    bg="white"
-    borderRadius={100}
-    _hover={{ bg: "gray.100" }}
-  >
-    Follow
-  </Button>
-);

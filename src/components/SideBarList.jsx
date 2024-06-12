@@ -5,7 +5,7 @@ const SideBarList = ({ sideBarButtons }) => {
   return (
     <List mb={5}>
       {sideBarButtons.map((btn) => (
-        <ListItem mb={1}>
+        <ListItem key={btn.title} mb={1}>
           <Button
             borderRadius={100}
             padding={5}
