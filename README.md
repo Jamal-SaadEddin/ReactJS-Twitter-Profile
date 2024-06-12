@@ -11,6 +11,9 @@ This project is a ReactJS implementation of a mock-up for the Twitter profile pa
 - **Responsiveness**: The layout adjusts to fit various screen sizes ensuring a consistent experience across devices.
 - **Component-Based**: Utilizes the power of ReactJS to manage the UI in a modular, efficient manner.
 
+## Project Link
+**https://jamal-saadeddin.github.io/ReactJS-Twitter-Profile**
+
 ## Technologies Used
 
 - ReactJS
