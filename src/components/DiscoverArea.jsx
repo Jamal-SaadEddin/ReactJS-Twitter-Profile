@@ -1,23 +1,14 @@
-import {
-  Button,
-  Icon,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  VStack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Button, VStack, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
-import { CiSearch } from "react-icons/ci";
 import { suggestedTrends, suggestedUsers } from "../constants/suggestedContent";
 import DiscoverBox from "./DiscoverBox";
 import Footer from "./Footer";
 import ProfileSummaryCard from "./ProfileSummaryCard";
+import SearchInput from "./SearchInput";
 import SummaryWidget from "./SummaryWidget";
 
 const DiscoverArea = () => {
   const SearchDivBgColor = useColorModeValue("white", "black");
-  const SearchInputBgColor = useColorModeValue("gray.100", "gray.700");
 
   const SuggestedUsersWidgets = suggestedUsers.map((user) => (
     <ProfileSummaryCard
@@ -48,18 +39,7 @@ const DiscoverArea = () => {
         bg={SearchDivBgColor}
         justifyContent="center"
       >
-        <InputGroup size="md">
-          <InputLeftElement pointerEvents="none">
-            <Icon as={CiSearch} color="gray.500" fontSize="20px" />
-          </InputLeftElement>
-          <Input
-            type="text"
-            placeholder="Search"
-            bg={SearchInputBgColor}
-            border="0"
-            borderRadius={100}
-          />
-        </InputGroup>
+        <SearchInput />
       </VStack>
       <DiscoverBox title="You might like" children={SuggestedUsersWidgets} />
       <VStack position="sticky" top="61px" gap={4}>
