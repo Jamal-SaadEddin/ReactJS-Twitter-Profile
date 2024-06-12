@@ -1,22 +1,19 @@
 import {
   Button,
-  HStack,
-  Heading,
   Icon,
   Input,
   InputGroup,
   InputLeftElement,
-  Link,
-  Text,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { CiSearch } from "react-icons/ci";
 
 import { suggestedTrends, suggestedUsers } from "../constants/suggestedContent";
+import DiscoverBox from "./DiscoverBox";
+import Footer from "./Footer";
 import ProfileSummaryCard from "./ProfileSummaryCard";
 import SummaryWidget from "./SummaryWidget";
-import DiscoverBox from "./DiscoverBox";
 
 const DiscoverArea = () => {
   const SuggestedUsersWidgets = suggestedUsers.map((user) => (
@@ -64,22 +61,7 @@ const DiscoverArea = () => {
       <DiscoverBox title="You might like" children={SuggestedUsersWidgets} />
       <VStack position="sticky" top="61px" gap={4}>
         <DiscoverBox title="Trends for you" children={SuggestedTrendsWidgets} />
-        <HStack
-          width="100%"
-          flexWrap="wrap"
-          rowGap={0}
-          fontSize="sm"
-          color="gray.600"
-          px={4}
-        >
-          <Link href="/">Terms of Service</Link>
-          <Link href="/">Privacy Policy</Link>
-          <Link href="/">Cookie Policy</Link>
-          <Link href="/">Accessibility</Link>
-          <Link href="/">Ads info</Link>
-          <Link href="/">More ···</Link>
-          <Text>© 2024 X Corp.</Text>
-        </HStack>
+        <Footer />
       </VStack>
     </VStack>
   );
