@@ -16,6 +16,7 @@ const SearchInput = () => {
         <Icon as={CiSearch} color="gray.500" fontSize="20px" />
       </InputLeftElement>
       <Input
+        name="search"
         type="text"
         placeholder="Search"
         bg={SearchInputBgColor}

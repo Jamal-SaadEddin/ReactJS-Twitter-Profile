@@ -8,13 +8,14 @@ const ProfileSummaryCard = ({
   userName,
   userId,
   action = null,
+  avatarOnly = false,
 }) => {
   const profilePictureSize =
     size === "large" ? "47px" : size === "md" ? "40px" : "35px";
   const fontSize = size === "large" ? "large" : size === "md" ? "md" : "sm";
 
   return (
-    <HStack width="100%" justifyContent="space-between">
+    <HStack width="100%" justifyContent="space-between" wrap="wrap">
       <HStack>
         <Image
           src={profilePicture}
@@ -22,10 +23,16 @@ const ProfileSummaryCard = ({
           borderRadius={50}
           cursor="pointer"
         />
-        <SummaryWidget fontSize={fontSize} title={userName} content={userId} />
+        {!avatarOnly && (
+          <SummaryWidget
+            fontSize={fontSize}
+            title={userName}
+            content={userId}
+          />
+        )}
       </HStack>
 
-      {action}
+      {!avatarOnly && action}
     </HStack>
   );
 };

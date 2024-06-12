@@ -1,4 +1,4 @@
-import { Button, List, ListItem } from "@chakra-ui/react";
+import { Button, Hide, List, ListItem } from "@chakra-ui/react";
 import React from "react";
 
 const SideBarList = ({ sideBarButtons }) => {
@@ -11,11 +11,14 @@ const SideBarList = ({ sideBarButtons }) => {
             padding={5}
             justifyContent="left"
             size="lg"
-            leftIcon={btn.logo}
             gap={2}
             bg="transparent"
           >
-            {btn.title}
+            {btn.logo}
+            <Hide below="lg">
+              <span>&nbsp;</span>
+              {btn.title}
+            </Hide>
           </Button>
         </ListItem>
       ))}

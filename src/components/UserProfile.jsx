@@ -47,11 +47,17 @@ const UserProfile = ({ user }) => {
           width="100%"
           justifyContent="space-between"
           position="relative"
-          bottom="80px"
+          bottom={{
+            base: "40px",
+            lg: "80px",
+          }}
         >
           <Image
             src={user.profilePicture}
-            width={150}
+            width={{
+              base: "100px",
+              lg: "150px",
+            }}
             borderRadius={100}
             border="3px solid black"
             position="relative"

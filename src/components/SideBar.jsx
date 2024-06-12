@@ -1,5 +1,15 @@
-import { Box, Button, Grid, GridItem, Icon, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Grid,
+  GridItem,
+  Icon,
+  Image,
+  Show,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import React from "react";
+import { BsFeather } from "react-icons/bs";
 import { IoIosMore } from "react-icons/io";
 import X_LOGO from "../assets/XLogo.png";
 import ProfilePicture from "../assets/jamal_pp.jpg";
@@ -8,8 +18,10 @@ import ProfileSummaryCard from "./ProfileSummaryCard";
 import SideBarList from "./SideBarList";
 
 const SideBar = () => {
+  const avatarOnly = useBreakpointValue({ base: true, lg: false });
+
   return (
-    <Box height="100%">
+    <Box height="100%" ml={2}>
       <Grid
         templateRows="1fr 1fr"
         height="100vh"
@@ -29,16 +41,26 @@ const SideBar = () => {
           <SideBarList sideBarButtons={sideBarButtons} />
           <Button
             size="lg"
-            width="100%"
+            width={{
+              base: "auto",
+              lg: "100%",
+            }}
             background="#1D9BF0"
-            borderRadius="20px"
-            py={5}
+            borderRadius={{
+              base: "100%",
+              lg: "20px",
+            }}
+            p={0}
+            ml={2}
             _hover={{ background: "#027bcc" }}
           >
-            Post
+            <Show above="lg">Post</Show>
+            <Show below="lg">
+              <Icon as={BsFeather} fontSize={24} />
+            </Show>
           </Button>
         </GridItem>
-        <GridItem alignSelf="end" m={5}>
+        <GridItem alignSelf="end" mb={5} ml={2}>
           <ProfileSummaryCard
             profilePicture={ProfilePicture}
             size="large"
@@ -49,6 +71,7 @@ const SideBar = () => {
                 <Icon as={IoIosMore} />
               </Button>
             }
+            avatarOnly={avatarOnly}
           />
         </GridItem>
       </Grid>
